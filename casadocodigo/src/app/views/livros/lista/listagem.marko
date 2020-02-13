@@ -1,0 +1,31 @@
+<html>  
+    <head> 
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1> Livros </h1>
+
+        <table id="table-livros">
+            <tr>
+                <th> Código </th>
+                <th> Descrição </th>
+                <th> Preço </th>
+                <th> Editar </th>
+                <th> Remover </th>
+            </tr>
+            <tr for (livro in data.livros) style="text-align:center;">
+                <td> ${ livro.id } </td>
+                <td> ${ livro.titulo } </td>
+                <td> ${ livro.preco } </td>
+                <td> <a href="/livros/form/${livros.id}"> <button type="button" style="color:white;background-color:orange;font-weight:bold;border:none;cursor:pointer"> 
+                    Editar </button> </a> </td>
+                <td> <button data-id="${livro.id}" data-type="delete" type="button" style="color:white;background-color:red;font-weight:bold;border:none;cursor:pointer"> 
+                    Excluir </button> </td>
+            </tr>
+        </table>
+
+
+        <script src="/estatico/js/remove-livro.js">  </script>
+
+    </body>
+</html>
